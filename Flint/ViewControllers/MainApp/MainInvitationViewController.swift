@@ -710,7 +710,7 @@ class MainInvitationViewController: UIViewController , UICollectionViewDataSourc
         let cell3 = "T"
         let cell31 = "F"
         
-        if(self.viewType == .AddPersonToInvite){
+        if(self.viewType == .AddPersonToInvite || self.viewType == .AfterParty){
             
             let user = self.usersList[presentIndex]
             
@@ -778,7 +778,7 @@ class MainInvitationViewController: UIViewController , UICollectionViewDataSourc
         cell3.frame.size.width = self.view.frame.width
         cell3.frame.size.height = self.collectionView.frame.height
         
-        if(self.viewType != .AddPersonToInvite){
+        if(self.viewType != .AddPersonToInvite && self.viewType != .AfterParty){
             
             var user = inviteInfo?.main
             

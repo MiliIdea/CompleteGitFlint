@@ -642,6 +642,9 @@ class FirstMapViewController: UIViewController ,MKMapViewDelegate , UINavigation
                 self.setMarkers()
                 
             }else{
+                print(Date().timeIntervalSince1970)
+                print(invite.available_at)
+                print(Double((invite.available_at)!) - Date().timeIntervalSince1970)
                 let interval = Double((invite.available_at)!) - Date().timeIntervalSince1970 - (40 * 60)
                 if(interval <= 0){
                     //alan bayad neshun bedim reConfirmo
